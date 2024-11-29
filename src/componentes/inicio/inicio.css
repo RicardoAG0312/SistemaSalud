@@ -1,0 +1,136 @@
+.seccionFondoInicio {
+    height: 90vh;
+    background-image: url("../../img/fondoinicio.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.seccionConvenios {
+    height: auto;
+    padding-bottom: 30px;
+}
+.imagenesConvenios {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.imagenesConvenios img {
+    width: 150px;
+    height: auto;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+.imagenesConvenios img:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+.seccionFormulario {
+    background-color: #FAFAFA;
+    border-radius: 100px 0 100px 0;
+    height: auto;
+    width: 600px;
+    -webkit-border-radius: 100px 0 100px 0;
+    -moz-border-radius: 100px 0 100px 0;
+    -ms-border-radius: 100px 0 100px 0;
+    -o-border-radius: 100px 0 100px 0;
+    box-shadow: 0 0 20px black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.seccionFormulario .subcontentform {
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.seccionFormulario input, .seccionFormulario textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #BAF8E7;
+}
+textarea {
+    min-height: 100px;
+    max-height: 100px;
+}
+
+/* Keyfrems */
+/* Medio (para retratos de tabletas y teléfonos móviles grandes) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Seccion convenios */
+    .seccionConvenios header {
+        font-size: 40px;
+    }
+    .imagenesConvenios img {
+        width: 100px;
+    }
+    /* Seccion formulario */
+    .seccionFormulario {
+        width: 500px;
+    }
+}
+/* Medio pequeño (para teléfonos móviles grandes) */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    /* Seccion convenios */
+    .seccionConvenios header {
+        font-size: 35px;
+    }
+    .imagenesConvenios img {
+        width: 80px;
+    }
+    /* Seccion formulario */
+    .seccionFormulario {
+        width: 450px;
+    }
+}
+/* Pequeño (para teléfonos móviles pequeños) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    /* Seccion convenios */
+    .seccionConvenios header {
+        font-size: 30px !important;
+    }
+    .imagenesConvenios img {
+        width: 80px;
+    }
+    /* Seccion de formulario */
+    .seccionFormulario {
+        width: 350px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}
+/* Extra pequeño (para teléfonos móviles muy pequeños) */
+@media only screen and (max-width: 320px) {
+        /* Seccion convenios */
+        .seccionConvenios header {
+            font-size: 30px !important;
+        }
+        .imagenesConvenios img {
+            width: 70px;
+        }
+        /* Seccion de formulario */
+        .seccionFormulario {
+            width: 250px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+}

@@ -1,0 +1,11 @@
+.contenedorInfoConsultaCita {
+    background-color: #3EF4C5;
+    min-height: 100vh; 
+    width: 100vw;
+    box-sizing: border-box;
+}
+.contenedorInfoConsultaCita h1 {
+    padding: 15px;
+    text-align: center;
+    font-size: 65px;
+}

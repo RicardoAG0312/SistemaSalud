@@ -1,0 +1,204 @@
+.team {
+    background-color: #3EF4C5;
+    min-height: 100vh; 
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.team h1 {
+    padding: 15px;
+    text-align: center;
+    font-size: 60px;
+}
+.contenedorDoc {
+    width: 100%;
+    height: auto;
+    margin: 40px auto;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+.contenedorDoc .infoDoctor {
+    background-color: #BAF8E7;
+    height: 300px;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+}
+.contenedorDoc .infoDoctor img, .contendorInfoDoc1 div:nth-child(1) img {
+    width: 120px;
+    height: auto;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.contenedorDoc .infoDoctor p {
+    background-color: #888;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.modal-content {
+    background-color: #BAF8E7;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    width: 600px;
+    box-sizing: border-box !important;
+    height: auto;
+}
+.contendorInfoDoc1 {
+    background-color: white;
+    height: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: grid;
+    grid-template-areas: 
+        "foto descripcion descripcion"
+        "cualidades especialidad especialidad"
+        "boton boton boton";
+    ;
+    grid-template-columns: 150px auto;
+    grid-template-rows: 1fr 1fr 30px;
+    font-size: 14px;
+}
+.contendorInfoDoc1 div:nth-child(1) {
+    grid-area: foto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contendorInfoDoc1 div:nth-child(2) {
+    grid-area: descripcion;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    text-align: justify;
+}
+.contendorInfoDoc1 div:nth-child(3) {
+    grid-area: cualidades;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 5px;
+}
+.contendorInfoDoc1 div:nth-child(4) {
+    grid-area: especialidad;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    text-align: justify;
+}
+.contendorInfoDoc1 div:nth-child(5) {
+    grid-area: boton;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Medias Querys */
+
+/* Medio (para retratos de tabletas y teléfonos móviles grandes) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .modal-content {
+        width: 500px;
+    }
+    .infoDoctor h3 {
+        font-size: 18px;
+    }
+    .modal-content p, .modal-content a {
+        font-size: 13px;
+    }
+}
+/* Medio pequeño (para teléfonos móviles grandes) */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    .modal-content {
+        width: 500px;
+    }
+    .contenedorDoc {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .infoDoctor h3 {
+        font-size: 18px;
+    }
+    .modal-content p, .modal-content a {
+        font-size: 12px;
+    }
+}
+/* Pequeño (para teléfonos móviles pequeños) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .modal-content {
+        width: 400px;
+        height: auto;
+        margin: 40px auto;
+    }
+    .contendorInfoDoc1 {
+        height: auto;
+    }
+    .contenedorDoc {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .infoDoctor h3 {
+        font-size: 16px;
+    }
+    .modal-content p {
+        font-size: 12px;
+    }
+}
+/* Extra pequeño (para teléfonos móviles muy pequeños) */
+@media only screen and (max-width: 320px) {
+    .contenedorDoc {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .modal-content p {
+        font-size: 14px;
+    }
+    .modal-content {
+        width: 280px;
+        height: auto;
+        margin: 40px auto;
+    }
+    .contendorInfoDoc1 {
+        height: auto;
+        grid-template-areas: 
+        "foto foto foto"
+        "descripcion descripcion descripcion"
+        "espcialidad especialidad especialidad"
+        "cualidades cualidades cualidades"
+        "boton boton boton";
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto 30px;
+    }
+
+}

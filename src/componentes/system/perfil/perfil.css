@@ -1,0 +1,122 @@
+/* Barra de navegacion lateral */
+.barralateral {
+    background-color: #39DEB3;
+    height: 100%;
+    width: 450px;
+    color: white;
+    transition: width .2s ease-in-out;
+    -webkit-transition: width .2s ease-in-out;
+    -moz-transition: width .2s ease-in-out;
+    -ms-transition: width .2s ease-in-out;
+    -o-transition: width .2s ease-in-out;
+    flex-shrink: 0;
+}
+.barralateral.collapsed {
+    width: 100px;
+}
+.barralateral a {
+    color: black;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    font-weight: bolder;
+    font-size: 22px;
+}
+.barralateral .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+.barralateral .linkslateral {
+    height: auto;
+    padding: 10px 0;
+    margin: 0px 25px;
+    transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+}
+.barralateral.collapsed .linkslateral {
+    opacity: 0;
+}
+.barralateral i {
+    font-size: 25px;
+}
+.barralateral .linkslateral div {
+    padding: 15px;
+    margin: 0px;
+    font-size: 18px;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.linkslateral .active {
+    background-color: #163B31;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.linkslateral .active a {
+    color: white;
+}
+.barralateral .linkslateral div:hover {
+    background-color: #163B31;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.barralateral .linkslateral div:hover a {
+    color: white;
+}
+.barralateral #busqueda {
+    background-color: #90ECD3;
+    margin: 15px 0 25px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-weight: bolder;
+    padding: 8px 20px;
+}
+.barralateral #busqueda input {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 5px;
+    width: 85%;
+}
+.barralateral #busqueda input:focus {
+    border: none;
+    outline: none;
+}
+
+
+
+
+.contenedorInfoPerfil {
+    padding: 20px;
+    background-color: #3EF4C5;
+    width: 100vw;
+    min-height: 100vh;
+}
+.contenedorInfoPerfil label {
+    font-weight: bolder;
+}
+.contenedorInfoPerfil h1 {
+    font-size: 60px;
+}

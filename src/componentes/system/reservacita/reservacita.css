@@ -1,0 +1,69 @@
+.contenedorInfoReservaCita {
+    padding: 20px;
+    background-color: #3EF4C5;
+    width: 100vw;
+    min-height: 100vh;
+}
+.contenedorInfoReservaCita .filterReserva input {
+    padding: 10px 15px;
+    width: 50%;
+    background-color: #90ECD3;
+    border: none;
+    font-weight: bolder;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.contenedorInfoReservaCita .filterReserva input:focus {
+    border: none;
+    outline: none;
+}
+table {
+    width: 90% !important;
+    margin: 35px auto;
+}
+table th, table td {
+    border: 1px solid black;
+    padding: 8px;
+    font-weight: bold;
+}
+table td {
+    padding: 15px 10px !important;
+}
+.modal-header, .modal-body, .modal-footer{
+    background: #BAF8E7;
+    color: black;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    outline: none;
+
+}
+.modal-body div.primero {
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+.modal-body div.segundo {
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 10px 0;
+}
+.modal-header p {
+    background-color: #163B31;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    margin: 0;
+}
+

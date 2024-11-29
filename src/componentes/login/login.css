@@ -1,0 +1,118 @@
+.contenedorLogin {
+    background-image: url("../../img/fondologin.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.contenedorLogin .container {
+    background-color: #39DEB3;
+    width: 500px;
+    height: 525px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.contenedorLogin .container h1 {
+    font-size: 50px;
+}
+.contenedorLogin .container div {
+    width: 100%;
+    padding: 15px;
+}
+.contenedorLogin .container div input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #90ECD3;
+    margin-top: 3px;
+}
+.contenedorLogin label::before {
+    content: "(*)";
+    color: rgba(255, 0, 0, 0.8);
+    font-weight: bolder;
+}
+
+/* Media Quersy */
+/* Grande (para ordenadores de escritorio grandes) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .contenedorLogin .container {
+        height: 450px;
+        margin: 25px auto;
+    }
+    .contenedorLogin .container h1 {
+        font-size: 40px;
+    }
+}
+/* Medio grande (para tabletas en paisaje y algunos ordenadores de escritorio) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .contenedorLogin .container {
+        height: 450px;
+        margin: 25px auto;
+    }
+    .contenedorLogin .container h1 {
+        font-size: 40px;
+    }
+}
+/* Medio (para retratos de tabletas y teléfonos móviles grandes) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .contenedorLogin .container {
+        height: 450px;
+        margin: 25px auto;
+    }
+    .contenedorLogin .container h1 {
+        font-size: 40px;
+    }
+}
+/* Medio pequeño (para teléfonos móviles grandes) */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    .contenedorLogin .container {
+        height: 450px;
+        margin: 25px auto;
+    }
+    .contenedorLogin .container h1 {
+        font-size: 40px;
+    }
+}
+/* Pequeño (para teléfonos móviles pequeños) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .contenedorLogin .container {
+        height: 430px;
+        width: 420px;
+        margin: 25px auto;
+    }
+    .contenedorLogin .container h1 {
+        font-size: 32px;
+    }
+}
+/* Extra pequeño (para teléfonos móviles muy pequeños) */
+@media only screen and (max-width: 320px) {
+    .contenedorLogin .container {
+        height: 430px;
+        width: 280px;
+        margin: 25px auto;
+    }
+    .contenedorLogin .container h1 {
+        font-size: 25px;
+    }
+    .contenedorLogin {
+        min-width: 100%;
+    }
+}
