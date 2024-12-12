@@ -1,38 +1,3 @@
-// import React, { useState } from 'react';
-// import { Link, useLocation } from 'react-router-dom';
-// import {ComponenteBarraNavLateral} from "../systeminicio/ComponenteInicioSystem";
-// import "./historial.css";
-
-// function ComponenteHistorial() {
-//     return (
-//         <>
-//             <section className="d-flex row">
-//                 <div className="col-12 col-sm-12 system d-flex" style={{width: "100%"}}>
-//                     <ComponenteBarraNavLateral />
-//                     <section className="contenedorInfoHistorial">
-//                         <h1 className="text-center" style={{fontSize: "70px", padding: "30px 20px"}}> MI HISTORIAL </h1>
-//                         <table className="table table-striped text-center">
-//                             <thead>
-//                                 <tr className="table-secondary">
-//                                     <th style={{fontWeight: "bold", padding: "20px"}}> Estado </th>
-//                                     <th style={{fontWeight: "bold", padding: "20px"}}> Fecha</th>
-//                                     <th style={{fontWeight: "bold", padding: "20px"}}> Doctor </th>
-//                                     <th style={{fontWeight: "bold", padding: "20px"}}> Función </th>
-//                                 </tr>
-//                             </thead>
-//                             <tbody>
-
-//                             </tbody>
-//                         </table>
-//                     </section>
-//                 </div>
-//             </section>
-//         </>
-//     )
-// }
-
-// export default ComponenteHistorial
-
 import React, { useState, useEffect } from 'react';
 import { ComponenteBarraNavLateral } from "../systeminicio/ComponenteInicioSystem";
 import "./historial.css";

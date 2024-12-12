@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 function ComponenteMisCitas() {
     const [citas, setCitas] = useState([]);
     const [filtro, setFiltro] = useState('');
+    const [usuario, setUsuario] = useState([]);
     const [historial, setHistorial] = useState([]);
 
     useEffect(() => {
@@ -13,6 +14,8 @@ function ComponenteMisCitas() {
         setCitas(citasGuardadas);
         const historialGuardado = JSON.parse(localStorage.getItem('historial')) || [];
         setHistorial(historialGuardado);
+        const datosUsuario = JSON.parse(localStorage.getItem("usuario"));
+        setUsuario(datosUsuario);
     }, []);
 
     const citasFiltradas = citas.filter((cita) =>
@@ -50,7 +53,21 @@ function ComponenteMisCitas() {
             text: '¡Verifique su historial!',
             icon: 'success',
         });
+
     }
+
+    useEffect(() => {
+        // Muestra todas las citas almacenadas
+        console.log('Citas:', citas);
+    
+        // Si quieres iterar sobre cada cita y mostrar sus propiedades
+        citas.forEach((cita, index) => {
+            console.log(`Cita ${index + 1}:`);
+            console.log('Doctor:', cita.doctor);
+            console.log('Fecha:', cita.fecha);
+            console.log('Especialidad:', cita.especialidad);
+        });
+    }, [citas]);
 
     return (
         <>
@@ -95,6 +112,16 @@ function ComponenteMisCitas() {
                                                 <div className="btn-group" role="group">
                                                     <button type="button" className="btn btn-danger" onClick={() => eliminarCita(index)}>Eliminar</button>
                                                     <button type="button" className="btn btn-warning" onClick={() => confirmacionCita(index)}>Confirmación</button>
+                                                    <button type="button" className="btn btn-secondary"> 
+                                                        <a
+                                                            style={{ textDecoration: "none", color: "white", fontWeight: "400" }}
+                                                            href={`https://controldeacceso.infoexpert.com.pe/_/excel/excel2.php?Nombre=${usuario.Nombre}&doctor=${cita.doctor}&DNI=${usuario.DNI}&especialidad=${cita.especialidad}&fecha=${cita.fecha}`}
+                                                            target="_blank"
+                                                            rel="noreferrer"
+                                                        >
+                                                            Descargar
+                                                        </a>
+                                                    </button>
                                                 </div>
                                             </td>
                                         </tr>

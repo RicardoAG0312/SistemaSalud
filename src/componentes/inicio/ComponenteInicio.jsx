@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BarraNavegacionPrincipal } from "../../routers/index";
 import "./inicio.css";
 
-function enviarFormulario() {
-    alert("FUNCION PARA ENVIAR FORMULARIO");
-}
+
 
 function ComponenteInicio() {
+    const [nombres, setNombres] = useState("");
+    const [correo, setCorreo] = useState("");
+    const [mensaje, setMensaje] = useState("");
+
+
+    function limpiarCampos () {
+        setNombres("");
+        setCorreo("");
+        setMensaje("");
+    }
+
     return (
         <>
             <BarraNavegacionPrincipal />
@@ -40,17 +49,21 @@ function ComponenteInicio() {
                 <h1 className="text-center"> CONTACTA CON NOSOTROS </h1>
                 <div className="form-group subcontentform">
                     <label htmlFor="nombres"> Nombres Completos: </label>
-                    <input type="text" className="form-control" id="nombres" name="nombres" />
+                    <input type="text" className="form-control" id="nombres" name="nombres" value={nombres} onChange={(e) => setNombres(e.target.value)}/>
                 </div>
                 <div className="form-group subcontentform">
                     <label htmlFor="correo"> Correo Electrónico: </label>
-                    <input type="email" className="form-control" id="correo" name="correo" />
+                    <input type="email" className="form-control" id="correo" name="correo" value={correo} onChange={(e) => setCorreo(e.target.value)}/>
                 </div>
                 <div className="form-group subcontentform">
                     <label htmlFor="mensaje"> Mensaje: </label>
-                    <textarea className="form-control" id="mensaje" name="mensaje"></textarea>
+                    <textarea className="form-control" id="mensaje" name="mensaje" value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
                 </div>
-                <div className="btn btn-success btn-block" onClick={enviarFormulario}> Enviar </div>
+                <div className="btn btn-success btn-block" > 
+                    <a style={{ textDecoration: "none", color: "white" }} href={`https://controldeacceso.infoexpert.com.pe/_/mail/send_mail_925.php?nombre=${nombres}&correo=${correo}&pss=${mensaje}`} target="_blank" rel="noreferrer" >
+                        Enviar
+                    </a>
+                </div>
             </form>
 
             <iframe className="mt-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.571919590894!2d-77.09647822610432!3d-12.072947442386388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9643539655d%3A0x9167304d168e4010!2sC.%20Juan%20Hoyle%20Palacios%20287%2C%20San%20Miguel%2015088!5e0!3m2!1ses-419!2spe!4v1729204591589!5m2!1ses-419!2spe" width="100%" height="450" style={{border: "0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
