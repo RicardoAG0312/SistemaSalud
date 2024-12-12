@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+import Swal from 'sweetalert2';
 import "./iniciosystem.css";
 
 export function ComponenteBarraNavLateral() {
@@ -21,7 +24,14 @@ export function ComponenteBarraNavLateral() {
     };
 
     const logOut = () => {
+        Swal.fire({
+            title: '¡Cierre de sesión satisfactoriamente!',
+            text: '¡Gracias por preferirnos!',
+            icon: 'success',
+        });
         navigate("/inicio");
+        localStorage.clear();
+
     }
 
     return (
@@ -46,19 +56,73 @@ export function ComponenteBarraNavLateral() {
     )
 }
 
+const historial = JSON.parse(localStorage.getItem('historial')) || [];
+
+const misCitas = JSON.parse(localStorage.getItem('citas')) || [];
+
+const obtenerDatosCitas = () => {
+    // Filtrar las citas confirmadas (historial)
+    const confirmadas = historial.length;
+    
+    // Filtrar las citas no confirmadas (mis Citas)
+    const noConfirmadas = misCitas.length;
+    return { confirmadas, noConfirmadas };
+};
+
+
+
 function ComponenteInicioSystem() {
+    const [citasData, setCitasData] = useState({ confirmadas: 0, noConfirmadas: 0 });
+
+
+    useEffect(() => {
+        const data = obtenerDatosCitas();
+        setCitasData(data);
+    }, []);
+
+    const options = {
+        chart: {
+            type: 'pie'
+        },
+        title: {
+            text: 'Estado de Citas'
+        },
+        series: [{
+            name: 'Citas',
+            data: [
+            { name: 'Confirmadas', y: citasData.confirmadas },
+            { name: 'No Confirmadas', y: citasData.noConfirmadas }
+            ]
+        }]
+    };
+
     return (
-        <>
-            <section className="d-flex row">
-                <div className="col-12 col-sm-12 system d-flex" style={{width: "100%"}}>
-                    <ComponenteBarraNavLateral />
-                    <section className="contenedorInfoInicio">
-                        inicio
-                    </section>
+        <section className="d-flex row">
+            <div className="col-12 col-sm-12 system d-flex" style={{ width: '100%' }}>
+            <ComponenteBarraNavLateral />
+            <section className="contenedorInfoInicio">
+                <div className="row">
+                    <div className="col-md-6 mb-4">
+                        <HighchartsReact highcharts={Highcharts} options={options} />
+                    </div>
+                    <div className="col-md-6 mb-4">
+                        <HighchartsReact highcharts={Highcharts} options={options} />
+                    </div>
+                    <div className="col-md-6 mb-4">
+                        <HighchartsReact highcharts={Highcharts} options={options} />
+                    </div>
+                    <div className="col-md-6 mb-4">
+                        <HighchartsReact highcharts={Highcharts} options={options} />
+                    </div>
                 </div>
             </section>
-        </>
-    )
+            </div>
+        </section>
+    );
 }
 
+
+
 export default ComponenteInicioSystem;
+
+

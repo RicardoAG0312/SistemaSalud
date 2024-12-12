@@ -7,112 +7,90 @@
     width: 100vw;
     position: relative;
 }
+
 .contenedorSign .row {
     position: absolute;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 60%;
+    width: 90%;
+    max-width: 800px; /* Ajuste para tamaños más grandes */
     height: auto;
     background-color: #39DEB3;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
+
 .contenedorSign h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 50px;
 }
+
 .contenedorSign label::before {
     content: "(*)";
     color: rgba(255, 0, 0, 0.8);
     font-weight: bolder;
 }
+
 .contenedorSign input {
     border: none;
     border-radius: 0%;
     background-color: #90ECD3;
-    -webkit-border-radius: 0%;
-    -moz-border-radius: 0%;
-    -ms-border-radius: 0%;
-    -o-border-radius: 0%;
     padding: 10px;
+    width: 100%;
 }
 
+@media only screen and (max-width: 992px) {
+    .contenedorSign .row {
+        width: 95%;
+    }
 
-/* Media Quersy */
-/* Grande (para ordenadores de escritorio grandes) */
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
-    .contenedorSign .container {
-        height: 450px;
-        margin: 25px auto;
-    }
-    .contenedorSign .container h1 {
+    .contenedorSign h1 {
         font-size: 40px;
     }
-}
-/* Medio grande (para tabletas en paisaje y algunos ordenadores de escritorio) */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-    .contenedorSign .container {
-        height: 450px;
-        margin: 25px auto;
-    }
-    .contenedorSign .container h1 {
-        font-size: 40px;
+
+    .contenedorSign .form-control {
+        font-size: 14px;
     }
 }
-/* Medio (para retratos de tabletas y teléfonos móviles grandes) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    .contenedorSign .container {
-        height: 450px;
-        margin: 25px auto;
+
+@media only screen and (max-width: 768px) {
+    .contenedorSign h1 {
+        font-size: 36px;
     }
-    .contenedorSign .container h1 {
-        font-size: 40px;
-    }
-}
-/* Medio pequeño (para teléfonos móviles grandes) */
-@media only screen and (min-width: 481px) and (max-width: 600px) {
-    .contenedorSign .container {
-        height: 450px;
-        margin: 25px auto;
-    }
-    .contenedorSign .container h1 {
-        font-size: 40px;
+
+    .contenedorSign .form-control {
+        font-size: 16px;
     }
 }
-/* Pequeño (para teléfonos móviles pequeños) */
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-    .contenedorSign .container {
-        height: 430px;
-        width: 420px;
-        margin: 25px auto;
+
+@media only screen and (max-width: 600px) {
+    .contenedorSign h1 {
+        font-size: 30px;
     }
-    .contenedorSign .container h1 {
-        font-size: 32px;
+
+    .contenedorSign .form-control {
+        font-size: 15px;
+    }
+
+    .contenedorSign .row {
+        width: 100%;
+        padding: 15px;
     }
 }
-/* Extra pequeño (para teléfonos móviles muy pequeños) */
-@media only screen and (max-width: 320px) {
-    .contenedorSign .container {
-        height: 430px;
-        width: 280px;
-        margin: 25px auto;
-    }
-    .contenedorLogin .container h1 {
+
+@media only screen and (max-width: 480px) {
+    .contenedorSign h1 {
         font-size: 25px;
     }
-    .contenedorLogin {
-        min-width: 100%;
+
+    .contenedorSign .row {
+        padding: 10px;
+    }
+
+    .contenedorSign .form-control {
+        font-size: 14px;
     }
 }

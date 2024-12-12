@@ -136,15 +136,19 @@
     .modal-content p, .modal-content a {
         font-size: 13px;
     }
+    .contenedorDoc {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
 /* Medio pequeño (para teléfonos móviles grandes) */
-@media only screen and (min-width: 481px) and (max-width: 600px) {
+@media only screen and (min-width: 320px) and (max-width: 600px) {
     .modal-content {
         width: 500px;
     }
     .contenedorDoc {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
     }
     .infoDoctor h3 {
         font-size: 18px;

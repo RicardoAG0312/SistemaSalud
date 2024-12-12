@@ -1,6 +1,82 @@
-.contenedorInfoMisCitas {
+/* .contenedorInfoMisCitas {
     padding: 20px;
     background-color: #3EF4C5;
     width: 100vw;
     min-height: 100vh;
+} */
+
+/* Estilo base */
+.contenedorInfoMisCitas {
+    padding: 20px;
+    background-color: #3EF4C5;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Ajustes de la tabla */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Estilo del título */
+h1 {
+    font-size: 3rem;
+    padding: 30px 20px;
+}
+
+/* Filtro de especialidad */
+.filterReserva input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Reducir tamaño del texto en dispositivos pequeños */
+    h1 {
+        font-size: 2rem;
+    }
+
+    .table th, .table td {
+        font-size: 1rem;
+    }
+
+    .filterReserva input {
+        width: 100%;
+    }
+
+    /* Ajustar botones */
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        margin-bottom: 10px;
+    }
+}
+
+/* Media Query para pantallas extra pequeñas */
+@media (max-width: 576px) {
+    /* Ajustar tamaño de los botones */
+    .btn-group .btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }

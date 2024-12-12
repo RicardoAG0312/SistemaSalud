@@ -6,113 +6,118 @@
     height: 100vh;
     width: 100vw;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Estilos del contenedor principal */
 .contenedorLogin .container {
     background-color: #39DEB3;
-    width: 500px;
-    height: 525px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 400px;
     border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    padding: 30px;
+    gap: 20px;
 }
+
+/* Título del contenedor */
 .contenedorLogin .container h1 {
-    font-size: 50px;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+/* Estilos de los inputs */
 .contenedorLogin .container div {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
 }
+
 .contenedorLogin .container div input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
     background-color: #90ECD3;
-    margin-top: 3px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
 }
+
+/* Label para campos obligatorios */
 .contenedorLogin label::before {
     content: "(*)";
     color: rgba(255, 0, 0, 0.8);
     font-weight: bolder;
 }
 
-/* Media Quersy */
-/* Grande (para ordenadores de escritorio grandes) */
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
+/* Estilos para el botón */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+/* Enlace de recuperación de contraseña */
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+
+/* Grande (para pantallas grandes de escritorio) */
+@media only screen and (min-width: 1200px) {
     .contenedorLogin .container {
-        height: 450px;
-        margin: 25px auto;
+        height: 500px;
+        margin: 20px auto;
     }
     .contenedorLogin .container h1 {
-        font-size: 40px;
+        font-size: 3rem;
     }
 }
-/* Medio grande (para tabletas en paisaje y algunos ordenadores de escritorio) */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+/* Mediano (para tabletas y dispositivos más pequeños) */
+@media only screen and (max-width: 992px) {
     .contenedorLogin .container {
-        height: 450px;
-        margin: 25px auto;
+        max-width: 450px;
+        padding: 20px;
     }
     .contenedorLogin .container h1 {
-        font-size: 40px;
+        font-size: 2rem;
     }
 }
-/* Medio (para retratos de tabletas y teléfonos móviles grandes) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+/* Pequeño (para dispositivos móviles más grandes) */
+@media only screen and (max-width: 768px) {
     .contenedorLogin .container {
-        height: 450px;
-        margin: 25px auto;
+        max-width: 90%;
+        padding: 15px;
     }
     .contenedorLogin .container h1 {
-        font-size: 40px;
+        font-size: 1.5rem;
     }
 }
-/* Medio pequeño (para teléfonos móviles grandes) */
-@media only screen and (min-width: 481px) and (max-width: 600px) {
+
+/* Extra pequeño (para móviles pequeños) */
+@media only screen and (max-width: 480px) {
     .contenedorLogin .container {
-        height: 450px;
-        margin: 25px auto;
+        max-width: 95%;
+        height: auto;
     }
     .contenedorLogin .container h1 {
-        font-size: 40px;
+        font-size: 1.2rem;
     }
-}
-/* Pequeño (para teléfonos móviles pequeños) */
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-    .contenedorLogin .container {
-        height: 430px;
-        width: 420px;
-        margin: 25px auto;
-    }
-    .contenedorLogin .container h1 {
-        font-size: 32px;
-    }
-}
-/* Extra pequeño (para teléfonos móviles muy pequeños) */
-@media only screen and (max-width: 320px) {
-    .contenedorLogin .container {
-        height: 430px;
-        width: 280px;
-        margin: 25px auto;
-    }
-    .contenedorLogin .container h1 {
-        font-size: 25px;
-    }
-    .contenedorLogin {
-        min-width: 100%;
+    button {
+        font-size: 1rem;
     }
 }
