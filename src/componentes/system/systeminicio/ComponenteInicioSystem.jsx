@@ -102,16 +102,10 @@ function ComponenteInicioSystem() {
             <ComponenteBarraNavLateral />
             <section className="contenedorInfoInicio">
                 <div className="row">
-                    <div className="col-md-6 mb-4">
+                    <div className="col-md-12 mb-4">
                         <HighchartsReact highcharts={Highcharts} options={options} />
                     </div>
-                    <div className="col-md-6 mb-4">
-                        <HighchartsReact highcharts={Highcharts} options={options} />
-                    </div>
-                    <div className="col-md-6 mb-4">
-                        <HighchartsReact highcharts={Highcharts} options={options} />
-                    </div>
-                    <div className="col-md-6 mb-4">
+                    <div className="col-md-12 mb-4">
                         <HighchartsReact highcharts={Highcharts} options={options} />
                     </div>
                 </div>
